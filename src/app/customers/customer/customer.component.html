@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="customer">{{customer.fields.seo_title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content  *ngIf="customer">
+
+  	<ion-img [src]="customer.fields.customer_logo"></ion-img>
+    <h1>{{customer.fields.seo_title}}</h1>
+    <div [innerHTML]="customer.fields.testimonial"></div>
+    
+<ion-button href="/customers">Back</ion-button>
+</ion-content>

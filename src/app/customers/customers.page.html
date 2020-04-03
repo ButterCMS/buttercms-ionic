@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customer Testimonials</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="customers">
+<ion-card *ngFor="let customer of customers">
+	<a href="/customers/{{customer.slug}}">
+  <ion-card-header>
+  	<img src="{{customer.fields.customer_logo}}" height="100px"/>
+    <ion-card-title>{{customer.fields.seo_title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div [innerHTML]="customer.fields.headline"></div>
+  </ion-card-content>
+</a>
+</ion-card>
+<ion-button href="/home">Back</ion-button>
+</ion-content>

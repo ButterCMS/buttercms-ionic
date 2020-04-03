@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="post">{{post.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+
+  	<ion-img [src]="post.featured_image"></ion-img>
+    <h1>{{post.title}}</h1>
+    <span>Published on: {{post.created|date:'MM/dd/yyyy'}}</span>
+
+    <div [innerHTML]="post.body"></div>
+    
+<ion-button href="/posts">Back</ion-button>
+</ion-content>

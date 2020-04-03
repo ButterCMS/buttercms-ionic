@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngIf="page">
+  <ion-card-header >
+  	<img src="{{page.fields.featured_image}}" height="200px"/>
+    <ion-card-subtitle>{{page.fields.subtitle}}</ion-card-subtitle>
+    <ion-card-title>{{page.fields.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+   <div [innerHTML]="page.fields.description"></div>
+  </ion-card-content>
+</ion-card>
+<ion-button href="/posts">View Posts</ion-button> <ion-button href="/customers">View Customers</ion-button><ion-button href="/categories">View Categories</ion-button>
+</ion-content>

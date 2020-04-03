@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<br><br>
+<ion-label>Click the button to view posts from the specific category</ion-label>
+<div *ngFor="let category of categories">
+<ion-button href="/categories/{{category.slug}}">View {{category.name}}</ion-button>
+</div>
+</ion-content>
